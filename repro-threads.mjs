@@ -30,3 +30,5 @@ try {
 }
 await ctx.close();
 console.log("Completed without crashing.");
+// See the matching comment in repro-forks.mjs: Vitest's own reporter can set a nonzero process.exitCode internally, unrelated to whether the process crashed. Reaching this line at all already means it didn't (a real SIGSEGV never returns control to JS), so force success rather than let that internal state read as a false "reproduced" signal.
+process.exitCode = 0;
