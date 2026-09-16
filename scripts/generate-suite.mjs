@@ -182,48 +182,12 @@ export function withCorrelationId(input: ${capitalize(name)}Input, id: string): 
 }
 `;
 
-  const test = `import { describe, expect, it } from "vitest";
-import {
-  build${capitalize(name)},
-  rank${capitalize(name)},
-  batch${capitalize(name)},
-  expiryOf,
-  daysUntilExpiry,
-} from "../src/features/${name}.js";
+  // Deliberately one trivial test per file: the original crash happens during file loading/transform, before any test bodies run, so total test *execution* time isn't what matters here -- the number of files rolldown has to transform is. A suite whose tests take hours to run risks hitting an unrelated, mundane "JavaScript heap out of memory" abort from ordinary long-run accumulation (Vitest's own retained test-result/reporting state) long before it ever reaches whatever GC condition the real bug depends on. Keeping each test fast keeps total wall-clock time bounded by collection/transform, not by however many thousands of tests there are.
+  const test = `import { expect, it } from "vitest";
+import { build${capitalize(name)} } from "../src/features/${name}.js";
 
-describe("${name}", () => {
-  const fixture = {
-    base: { id: "base", label: "base-record", weight: 1, tags: ["core"] },
-    variants: [
-      { id: "v1", label: "variant-one", weight: 3, tags: ["extra"] },
-      { id: "v2", label: "variant-two", weight: 2, tags: [] },
-      { id: "v3", label: "variant-three", weight: 5, tags: ["extra", "core"] },
-    ],
-  };
-
-  it("builds and validates the input", () => {
-    const built = build${capitalize(name)}(fixture);
-    expect(built.variants).toHaveLength(3);
-  });
-
-  it("ranks variants by score, highest first", () => {
-    const built = build${capitalize(name)}(fixture);
-    const ranked = rank${capitalize(name)}(built);
-    expect(ranked.length).toBeGreaterThan(0);
-  });
-
-  it("batches ranked variants", () => {
-    const built = build${capitalize(name)}(fixture);
-    const batches = batch${capitalize(name)}(built, 2);
-    expect(batches.length).toBeGreaterThan(0);
-  });
-
-  it("computes an expiry date offset from creation", () => {
-    const built = build${capitalize(name)}(fixture);
-    const expiry = expiryOf(built, 7);
-    expect(typeof expiry).toBe("string");
-    expect(typeof daysUntilExpiry(built, 7)).toBe("number");
-  });
+it("${name} builds", () => {
+  expect(build${capitalize(name)}({ base: { id: "b", label: "l", weight: 1, tags: [] }, variants: [{ id: "v", label: "l", weight: 1, tags: [] }] }).variants).toHaveLength(1);
 });
 `;
 
