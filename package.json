@@ -14,7 +14,7 @@
     "typescript": "^5.9.0"
   },
   "dependencies": {
-    "zod": "^4.1.0",
+    "zod": "^4.6.4",
     "date-fns": "^4.1.0",
     "nanoid": "^5.1.0",
     "lodash-es": "^4.17.21",
