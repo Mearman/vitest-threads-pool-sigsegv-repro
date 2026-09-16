@@ -1,0 +1,24 @@
+{
+  "name": "vitest-threads-pool-sigsegv-repro",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "generate": "node scripts/generate-suite.mjs",
+    "repro:threads": "node repro-threads.mjs",
+    "repro:forks": "node repro-forks.mjs"
+  },
+  "devDependencies": {
+    "vite": "8.1.4",
+    "vitest": "4.1.10",
+    "typescript": "^5.9.0"
+  },
+  "dependencies": {
+    "zod": "^4.1.0",
+    "date-fns": "^4.1.0",
+    "nanoid": "^5.1.0",
+    "lodash-es": "^4.17.21",
+    "uuid": "^13.0.0",
+    "immer": "^10.1.3"
+  }
+}

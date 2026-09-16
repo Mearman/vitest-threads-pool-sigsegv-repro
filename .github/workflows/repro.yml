@@ -1,0 +1,76 @@
+name: Reproduce threads-pool SIGSEGV
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      suite_size:
+        description: "Number of generated feature+test file pairs"
+        default: "8000"
+      blob_kb:
+        description: "Per-file synthetic data blob size (KB)"
+        default: "24"
+
+jobs:
+  threads-pool-crash:
+    name: pool "threads" (node ${{ matrix.node }}) -- expected to crash
+    runs-on: macos-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["24", "26"]
+    env:
+      SUITE_SIZE: ${{ inputs.suite_size || '8000' }}
+      SUITE_BLOB_KB: ${{ inputs.blob_kb || '24' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm run generate
+      - name: Run under pool "threads", maxWorkers 1
+        id: threads
+        run: |
+          set +e
+          node repro-threads.mjs
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          echo "Process exited with code $code"
+          if [ "$code" -gt 128 ]; then
+            signal=$((code - 128))
+            echo "Terminated by signal $signal (128+$signal)."
+          fi
+      - name: Report reproduction status
+        run: |
+          code="${{ steps.threads.outputs.exit_code }}"
+          if [ "$code" -gt 128 ]; then
+            echo "REPRODUCED: the process was killed by a signal (exit code $code), matching the SIGSEGV (139) reported in vitest-dev/vitest#11291."
+            exit 0
+          fi
+          echo "NOT REPRODUCED this run: process exited cleanly with code $code. This crash has been reported as intermittent under CI-runner-level memory pressure -- see README for details, and re-run the workflow if this job is unexpectedly green."
+          exit 1
+
+  forks-pool-comparison:
+    name: pool "forks" (node ${{ matrix.node }}) -- expected to pass cleanly
+    runs-on: macos-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["24", "26"]
+    env:
+      SUITE_SIZE: ${{ inputs.suite_size || '8000' }}
+      SUITE_BLOB_KB: ${{ inputs.blob_kb || '24' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm run generate
+      - name: Run under pool "forks", maxWorkers 1 (same file set, same Node API call)
+        run: node repro-forks.mjs
