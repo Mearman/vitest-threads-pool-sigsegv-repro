@@ -4,8 +4,5 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
-    ignore:
-      # This repo's whole point is pinning the exact versions from the original bug report -- bumping them would defeat the reproduction.
-      - dependency-name: "vite"
-      - dependency-name: "vitest"
-      - dependency-name: "@vitest/mocker"
+    # This is a single-purpose reproduction repo, not a maintained package -- it doesn't need routine dependency-bump PRs, and their CI runs compete for the same limited macOS runner concurrency the actual repro workflow needs.
+    open-pull-requests-limit: 0
