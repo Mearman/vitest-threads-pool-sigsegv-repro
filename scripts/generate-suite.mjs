@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
-const count = Number(process.env.SUITE_SIZE ?? 8000);
+const count = Number(process.env.SUITE_SIZE ?? 20000);
 const blobSizeKb = Number(process.env.SUITE_BLOB_KB ?? 24);
 
 function randomBlob(sizeKb) {
@@ -77,6 +77,8 @@ for (let i = 0; i < count; i++) {
   if (i > 500) crossImports.push(i - 500);
   if (i > 2000) crossImports.push(i - 2000);
   if (i > 5000) crossImports.push(i - 5000);
+  if (i > 10000) crossImports.push(i - 10000);
+  if (i > 15000) crossImports.push(i - 15000);
   const crossImportLines = crossImports
     .map((j) => {
       const dep = `feature${String(j).padStart(5, "0")}`;

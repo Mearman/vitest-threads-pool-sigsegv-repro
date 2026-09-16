@@ -8,7 +8,7 @@ on:
     inputs:
       suite_size:
         description: "Number of generated feature+test file pairs"
-        default: "8000"
+        default: "20000"
       blob_kb:
         description: "Per-file synthetic data blob size (KB)"
         default: "24"
@@ -17,13 +17,13 @@ jobs:
   threads-pool-crash:
     name: pool "threads" (node ${{ matrix.node }}) -- expected to crash
     runs-on: macos-latest
-    timeout-minutes: 180
+    timeout-minutes: 350
     strategy:
       fail-fast: false
       matrix:
         node: ["24", "26"]
     env:
-      SUITE_SIZE: ${{ inputs.suite_size || '8000' }}
+      SUITE_SIZE: ${{ inputs.suite_size || '20000' }}
       SUITE_BLOB_KB: ${{ inputs.blob_kb || '24' }}
     steps:
       - uses: actions/checkout@v4
@@ -57,13 +57,13 @@ jobs:
   forks-pool-comparison:
     name: pool "forks" (node ${{ matrix.node }}) -- expected to pass cleanly
     runs-on: macos-latest
-    timeout-minutes: 180
+    timeout-minutes: 350
     strategy:
       fail-fast: false
       matrix:
         node: ["24", "26"]
     env:
-      SUITE_SIZE: ${{ inputs.suite_size || '8000' }}
+      SUITE_SIZE: ${{ inputs.suite_size || '20000' }}
       SUITE_BLOB_KB: ${{ inputs.blob_kb || '24' }}
     steps:
       - uses: actions/checkout@v4
