@@ -4,37 +4,46 @@ Minimal reproduction for [vitest-dev/vitest#11291](https://github.com/vitest-dev
 
 ## Why this exists
 
-The original report came from a large private monorepo, where the crashing invocation was Vite's own `@stryker-mutator/vitest-runner`, which hardcodes `pool: 'threads'` (see [stryker-mutator/stryker-js#6223](https://github.com/stryker-mutator/stryker-js/issues/6223)). That monorepo can't be shared, so this repo generates a large synthetic suite from scratch, at the same rough scale (thousands of files, real dependency usage, `vite` 8's rolldown transform pipeline), and drives it through the exact same Node API call shape -- no Stryker involved.
+The original report came from a large private monorepo, where the crashing invocation was Vite's own `@stryker-mutator/vitest-runner`, which hardcodes `pool: 'threads'` (see [stryker-mutator/stryker-js#6223](https://github.com/stryker-mutator/stryker-js/issues/6223)). That monorepo can't be shared, so this repo generates a large synthetic pnpm workspace from scratch and drives it through the exact same Node API call shape -- no Stryker involved.
 
 ## Environment
 
 - `vite` 8.1.4, `vitest` 4.1.10 (pinned exactly, matching the original report)
+- pnpm 10.33.0 (matching the original monorepo's own package manager -- see "Why a pnpm workspace, not a flat file tree" below)
 - Reproduces on Node 24 and Node 26
 - macOS arm64 (the CI workflow runs `macos-latest`, currently arm64)
 
 ## Structure
 
-- `scripts/generate-suite.mjs` -- generates `src/features/*.ts` + `test/*.test.ts` on demand (both directories are gitignored; nothing generated is committed). Each feature *module* does real work with `zod`, `date-fns`, `nanoid`, `uuid`, `lodash-es`, and `immer`, cross-imports into up to nine other generated modules at varying distances to widen the transitive import graph well beyond a flat star, and carries a synthetic data blob to add extra parse/heap weight per file -- controlled by `SUITE_SIZE` (file-pair count, default 20000) and `SUITE_BLOB_KB` (blob size per file in KB, default 24). Each *test* file is deliberately a single trivial assertion: the original crash happens during file loading/transform, before any test bodies run, so the thing worth stressing is the number of files Rolldown has to transform, not how long the tests themselves take to execute -- see "A note on reproducing this synthetically" below for why this matters.
-- `repro-threads.mjs` -- calls `createVitest("test", { pool: "threads", maxWorkers: 1, ... })` from `vitest/node`, globs every generated test file, and runs them all in one invocation.
+- `pnpm-workspace.yaml` -- this repo is a real pnpm workspace, not a single package.
+- `scripts/generate-workspace.mjs` -- generates `packages/pkgNNNN/` on demand (gitignored; nothing generated is committed). Each package is its own `package.json` (`@synth/pkgNNNN`), resolved through pnpm's symlinked `node_modules` and a package.json `exports` map pointing straight at TypeScript source (no build step), the same way the original monorepo's own internal packages are resolved. Each package uses a real, moderately heavy external dependency in rotation -- `drizzle-orm` + `better-sqlite3`, `zod` + `@orpc/client`/`@orpc/server`, `@electric-sql/pglite`, or a `zod` + `drizzle-orm` mix -- and cross-imports 1-2 other generated packages via `workspace:*` to build a real, resolvable dependency graph rather than a flat star. Controlled by `WORKSPACE_SIZE` (package count, default 300) and `TESTS_PER_PACKAGE` (test cases per package, default 15).
+- `repro-threads.mjs` -- calls `createVitest("test", { pool: "threads", maxWorkers: 1, ... })` from `vitest/node`, globs every generated package's test file, and runs them all in one invocation.
 - `repro-forks.mjs` -- identical, except `pool: "forks"`, included as the clean comparison run.
-- `.github/workflows/repro.yml` -- runs both on `macos-latest` across Node 24 and 26, with `NODE_OPTIONS=--max-old-space-size=6144` to give the process headroom against an unrelated, mundane out-of-memory abort (see below).
+- `.github/workflows/repro.yml` -- runs both on `macos-latest` across Node 24 and 26, with `NODE_OPTIONS=--max-old-space-size=6144` for headroom against an unrelated, mundane out-of-memory abort (see below).
+
+## Why a pnpm workspace, not a flat file tree
+
+The first version of this repo generated a large number of files inside one flat package (up to 20000), with a shallow ~6-package dependency surface (`zod`, `date-fns`, `nanoid`, `uuid`, `lodash-es`, `immer`). That never reproduced the crash, at any scale tried -- see "Prior attempts" below.
+
+Going back to the actual related-file set the original crash was triggered against (reconstructed via `npx vitest related --run --reporter=json --outputFile=related.json <mutated-package>/src/*.ts`, the same command the original report used) showed a structurally different shape: 454 test files pull in **61 distinct internal workspace packages** and a handful of genuinely heavy external dependencies -- an ORM (`drizzle-orm`), a WASM-backed embedded database (`@electric-sql/pglite`), a typed RPC framework (`@orpc/client`/`@orpc/server`), plus `zod`, `wrangler`'s type surface, and the Vercel AI SDK's provider types. Average test file size in the real set was ~13.8 KB (up to 48 KB), not a handful of lines. That's a real multi-package pnpm workspace, resolved through pnpm's own symlinked `node_modules` and each package's `exports` map -- not a large flat file count in a single package.
+
+This version tests that structural hypothesis directly: many small real packages, cross-importing each other through the exact resolution mechanism (pnpm workspace symlinks + `exports` maps) the original crash's dependency graph actually used, using real (if smaller-scale) versions of the same class of heavy dependencies.
 
 ## Running it locally
 
 ```bash
-npm install
-npm run generate            # writes src/features/ and test/ (SUITE_SIZE=20000, SUITE_BLOB_KB=24 by default)
-npm run repro:threads       # expected: process dies with SIGSEGV (exit code 139)
-npm run repro:forks         # expected: completes cleanly
+pnpm install
+pnpm run generate           # writes packages/pkgNNNN/ (WORKSPACE_SIZE=300, TESTS_PER_PACKAGE=15 by default)
+pnpm install                 # links the newly generated packages' workspace:* dependencies
+pnpm run repro:threads       # expected: process dies with SIGSEGV (exit code 139)
+pnpm run repro:forks         # expected: completes cleanly
 ```
 
-Scale the suite further with environment variables if you need to push harder to trigger the crash:
+Scale further with environment variables if you need to push harder:
 
 ```bash
-SUITE_SIZE=40000 SUITE_BLOB_KB=48 NODE_OPTIONS=--max-old-space-size=6144 npm run generate
+WORKSPACE_SIZE=600 TESTS_PER_PACKAGE=20 NODE_OPTIONS=--max-old-space-size=6144 pnpm run generate && pnpm install
 ```
-
-Note: at larger `SUITE_SIZE`, most of the added weight so far has come from widening the cross-import graph and per-file function count rather than raw blob size -- see `scripts/generate-suite.mjs` if you want to tune that balance further. Raising `SUITE_BLOB_KB` a lot without also raising `--max-old-space-size` risks hitting the unrelated OOM abort described below before you ever reach the crash this repo targets.
 
 ## Expected vs actual
 
@@ -43,21 +52,24 @@ Note: at larger `SUITE_SIZE`, most of the added weight so far has come from wide
 
 ## Crash signature (from the original report)
 
-Consistent across every occurrence in the original environment (macOS DiagnosticReports, ~15 crash reports on that machine, since these runs were part of routine CI): the faulting thread is the pool's `WorkerThread`; the stack terminates in either
+Consistent across every occurrence in the original environment (macOS DiagnosticReports, dozens of real crash reports on that machine going back several days, independently parsed and confirmed): the faulting thread is a `node::worker::Worker`; the stack terminates in either
 
 - `v8::internal::Isolate::Deinit` -> `Heap::StartTearDown` -> `CppHeap::StartDetachingIsolate` -> `Heap::CollectGarbage` -> `GlobalHandles::InvokeFirstPassWeakCallbacks` -> SIGSEGV (worker teardown GC), or
 - `IncrementalMarkingJob::Task::RunInternal` -> `MarkCompactCollector::StartMarking` -> `MarkingWorklists::Local::~Local` -> SIGSEGV (near-null deref)
 
-The crashing process hosted vite 8's own `rolldown-worker` native transform threads alongside the Vitest worker isolate; the only `.node` addons loaded were `rolldown-binding.darwin-arm64.node` and `fsevents.node` -- the crash happens during file loading/transform, before any test bodies run, so it is not related to any native module a test itself might use.
+The crashing process hosted vite 8's own `rolldown-worker` native transform threads alongside the Vitest worker isolate; the only `.node` addons loaded were `rolldown-binding.darwin-arm64.node` and `fsevents.node` -- no database driver of any kind -- so the crash happens during file loading/transform, before any test bodies run, and is not related to any native module a test itself might use.
 
-## A note on reproducing this synthetically
+**A caveat worth stating plainly:** the original report's Environment section also states the crash was "also seen on GitHub Actions arm64 macOS runners." That specific claim has no supporting evidence behind it -- every confirmed crash report traces back to one physical machine's own local diagnostic logs, not any CI system, and the monorepo the crash originated in runs its own CI exclusively on Linux runners. Treat that one sentence in the original report as unverified.
 
-The original crash was traced to Stryker's Node-API-driven invocation running the *related* test set for one package in a large real monorepo (454 files / ~4,900 tests, spanning many packages). A synthetic suite generated from scratch is not guaranteed to hit the exact same V8 heap-layout/GC-timing window that trips this -- reproducing it reliably may take a larger `SUITE_SIZE`/`SUITE_BLOB_KB` than this repo's defaults, and/or a specific machine's memory pressure at the time. If the CI workflow's `threads-pool-crash` job comes back green on a given run, that means the crash reproduced (see the job's own "Report reproduction status" step); if it's red because the process exited cleanly, try re-running with a larger `SUITE_SIZE`/`SUITE_BLOB_KB` via `workflow_dispatch`, or on a machine under real memory pressure.
+## Prior attempts (flat-file design)
 
-Local runs at 500, 1500, 2000, and 4000 file-pairs (with real dependency usage and up to 40 KB synthetic blobs per file) all completed cleanly without reproducing the crash -- consistent with the original investigation's own finding that a smaller synthetic suite (420 files) didn't crash either. A subsequent CI run at 8000 files on a clean `macos-latest` runner (no local machine contention) also completed cleanly on Node 26 and Node 24 after ~2 hours each.
+Before this pnpm-workspace version, a flat single-package design was tried extensively and never reproduced the SIGSEGV, at any scale:
 
-**A 20000-file run (each test file originally carrying four real assertions, per the earlier design) surfaced a different, mundane failure instead: `FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory`, aborting via SIGABRT (exit code 134) after roughly 4h15m-4h40m.** All four jobs in that run -- both `threads` and both `forks`, on both Node 24 and Node 26 -- hit the identical abort at essentially the same wall-clock point, which confirms it's pool-independent: not the SIGSEGV this repo targets, but an ordinary V8 heap ceiling. The `threads-pool-crash` job's own "Report reproduction status" step originally treated *any* signal-killed exit (`code > 128`) as a reproduction, which conflated this with the real thing; it now checks specifically for exit code 139 (SIGSEGV) and reports a heap-limit abort as a distinct, explicit non-match.
+- Local runs at 500, 1500, 2000, and 4000 file-pairs (real dependency usage, up to 40 KB synthetic data blobs per file) all completed cleanly -- consistent with the original investigation's own finding that a 420-file synthetic suite didn't crash either.
+- A CI run at 8000 files on a clean `macos-latest` runner also completed cleanly on both Node 24 and Node 26, in ~2 hours each.
+- A 20000-file run (44x the real trigger set's file count) surfaced a different, mundane failure instead: `FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory` (SIGABRT, exit code 134) after 2-4.5 hours, hitting all four pool/Node combinations at nearly the same wall-clock point -- an ordinary V8 heap ceiling from Vitest's own retained per-test state over a very long-running process, unrelated to the SIGSEGV this repo targets. Fixed by making generated tests trivial (a single fast assertion each, since the real crash is reported to happen during collection/transform, before test bodies run) and raising `NODE_OPTIONS=--max-old-space-size`; a subsequent 20000-file run with that fix completed with no crash of any kind.
+- Across every one of these, the CI workflow's own reproduction check had a real bug: it treated *any* signal-killed exit (`code > 128`) as a match, conflating the SIGSEGV (139) this repo targets with the unrelated OOM abort (134) above. Fixed to check specifically for exit code 139.
 
-The likely cause: with `maxWorkers: 1`, a suite that takes hours to *run* (not just to collect/transform) accumulates Vitest's own retained per-test state (results, source maps, reporting data) for the lifetime of one long-lived process, which can exhaust the heap on ordinary long-run growth alone, with nothing to do with the specific GC condition the real bug depends on. Since the original crash is reported to happen "during file loading, before any test bodies run," the fix was to make each generated test trivial (a single fast assertion) so total wall-clock time is dominated by collection/transform of however many files `SUITE_SIZE` generates, not by however long thousands of real test bodies take to execute -- this lets `SUITE_SIZE` scale much higher within a bounded, sane runtime, and CI now also sets `NODE_OPTIONS=--max-old-space-size=6144` for extra headroom against the same class of mundane OOM.
+The consistent result across every flat-file scale tried, up to 44x the real trigger set's file count, is what motivated the structural rework above: raw file count in one package clearly isn't the dominant factor, so this version tests dependency-graph shape and cross-package resolution complexity instead.
 
-If you get this to crash with a genuine SIGSEGV (exit code 139, not 134) at a specific `SUITE_SIZE`/`SUITE_BLOB_KB`, please say so in an issue or PR here -- that data point is directly useful for narrowing down what specifically triggers it.
+If you get this to crash with a genuine SIGSEGV (exit code 139, not 134) at a specific `WORKSPACE_SIZE`/`TESTS_PER_PACKAGE`, please say so in an issue or PR here -- that data point is directly useful for narrowing down what specifically triggers it.

@@ -6,12 +6,12 @@ on:
   pull_request:
   workflow_dispatch:
     inputs:
-      suite_size:
-        description: "Number of generated feature+test file pairs"
-        default: "20000"
-      blob_kb:
-        description: "Per-file synthetic data blob size (KB)"
-        default: "24"
+      workspace_size:
+        description: "Number of generated @synth/pkgNNNN workspace packages"
+        default: "300"
+      tests_per_package:
+        description: "Test cases generated per package"
+        default: "15"
 
 jobs:
   threads-pool-crash:
@@ -23,16 +23,18 @@ jobs:
       matrix:
         node: ["24", "26"]
     env:
-      SUITE_SIZE: ${{ inputs.suite_size || '20000' }}
-      SUITE_BLOB_KB: ${{ inputs.blob_kb || '24' }}
+      WORKSPACE_SIZE: ${{ inputs.workspace_size || '300' }}
+      TESTS_PER_PACKAGE: ${{ inputs.tests_per_package || '15' }}
       NODE_OPTIONS: --max-old-space-size=6144
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - run: npm install
-      - run: npm run generate
+      - run: pnpm install
+      - run: pnpm run generate
+      - run: pnpm install
       - name: Run under pool "threads", maxWorkers 1
         id: threads
         run: |
@@ -54,10 +56,10 @@ jobs:
           fi
           if [ "$code" -gt 128 ]; then
             signal=$((code - 128))
-            echo "NOT A MATCH: the process was killed by signal $signal (exit code $code), not SIGSEGV (signal 11, exit code 139). Signal 6 (SIGABRT, exit code 134) most often means a V8 'JavaScript heap out of memory' abort -- a different, mundane failure mode from the crash this repo targets; check the job log for 'FATAL ERROR' to confirm. If this keeps happening, the suite is hitting a heap ceiling before it can reach whatever GC condition trips the real bug -- try NODE_OPTIONS=--max-old-space-size=<larger>, or a suite shape that finishes collection/transform quickly with fast test bodies rather than one that runs for hours."
+            echo "NOT A MATCH: the process was killed by signal $signal (exit code $code), not SIGSEGV (signal 11, exit code 139). Signal 6 (SIGABRT, exit code 134) most often means a V8 'JavaScript heap out of memory' abort -- a different, mundane failure mode from the crash this repo targets; check the job log for 'FATAL ERROR' to confirm. If this keeps happening, the suite is hitting a heap ceiling before it can reach whatever GC condition trips the real bug -- try NODE_OPTIONS=--max-old-space-size=<larger>."
             exit 1
           fi
-          echo "NOT REPRODUCED this run: process exited cleanly with code $code. See README for details, and re-run the workflow (optionally at a larger SUITE_SIZE/SUITE_BLOB_KB via workflow_dispatch) if you want to try again."
+          echo "NOT REPRODUCED this run: process exited cleanly with code $code. See README for details, and re-run the workflow (optionally at a larger WORKSPACE_SIZE/TESTS_PER_PACKAGE via workflow_dispatch) if you want to try again."
           exit 1
 
   forks-pool-comparison:
@@ -69,15 +71,17 @@ jobs:
       matrix:
         node: ["24", "26"]
     env:
-      SUITE_SIZE: ${{ inputs.suite_size || '20000' }}
-      SUITE_BLOB_KB: ${{ inputs.blob_kb || '24' }}
+      WORKSPACE_SIZE: ${{ inputs.workspace_size || '300' }}
+      TESTS_PER_PACKAGE: ${{ inputs.tests_per_package || '15' }}
       NODE_OPTIONS: --max-old-space-size=6144
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - run: npm install
-      - run: npm run generate
+      - run: pnpm install
+      - run: pnpm run generate
+      - run: pnpm install
       - name: Run under pool "forks", maxWorkers 1 (same file set, same Node API call)
         run: node repro-forks.mjs

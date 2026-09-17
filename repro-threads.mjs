@@ -7,7 +7,7 @@ import { glob } from "node:fs/promises";
 import path from "node:path";
 
 const files = [];
-for await (const entry of glob("test/**/*.test.ts")) {
+for await (const entry of glob("packages/*/src/*.test.ts")) {
   files.push(path.resolve(entry));
 }
 console.log(`Running ${files.length} test files under pool: "threads", maxWorkers: 1`);
