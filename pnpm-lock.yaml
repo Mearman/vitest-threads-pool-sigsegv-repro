@@ -1261,6 +1261,3471 @@ importers:
         specifier: ^4.1.0
         version: 4.6.2
 
+  packages/pkg0080:
+    dependencies:
+      '@synth/pkg0070':
+        specifier: workspace:*
+        version: link:../pkg0070
+      '@synth/pkg0079':
+        specifier: workspace:*
+        version: link:../pkg0079
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0081:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0071':
+        specifier: workspace:*
+        version: link:../pkg0071
+      '@synth/pkg0080':
+        specifier: workspace:*
+        version: link:../pkg0080
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0082:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0072':
+        specifier: workspace:*
+        version: link:../pkg0072
+      '@synth/pkg0081':
+        specifier: workspace:*
+        version: link:../pkg0081
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0083:
+    dependencies:
+      '@synth/pkg0073':
+        specifier: workspace:*
+        version: link:../pkg0073
+      '@synth/pkg0082':
+        specifier: workspace:*
+        version: link:../pkg0082
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0084:
+    dependencies:
+      '@synth/pkg0074':
+        specifier: workspace:*
+        version: link:../pkg0074
+      '@synth/pkg0083':
+        specifier: workspace:*
+        version: link:../pkg0083
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0085:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0075':
+        specifier: workspace:*
+        version: link:../pkg0075
+      '@synth/pkg0084':
+        specifier: workspace:*
+        version: link:../pkg0084
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0086:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0076':
+        specifier: workspace:*
+        version: link:../pkg0076
+      '@synth/pkg0085':
+        specifier: workspace:*
+        version: link:../pkg0085
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0087:
+    dependencies:
+      '@synth/pkg0077':
+        specifier: workspace:*
+        version: link:../pkg0077
+      '@synth/pkg0086':
+        specifier: workspace:*
+        version: link:../pkg0086
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0088:
+    dependencies:
+      '@synth/pkg0078':
+        specifier: workspace:*
+        version: link:../pkg0078
+      '@synth/pkg0087':
+        specifier: workspace:*
+        version: link:../pkg0087
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0089:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0079':
+        specifier: workspace:*
+        version: link:../pkg0079
+      '@synth/pkg0088':
+        specifier: workspace:*
+        version: link:../pkg0088
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0090:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0080':
+        specifier: workspace:*
+        version: link:../pkg0080
+      '@synth/pkg0089':
+        specifier: workspace:*
+        version: link:../pkg0089
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0091:
+    dependencies:
+      '@synth/pkg0081':
+        specifier: workspace:*
+        version: link:../pkg0081
+      '@synth/pkg0090':
+        specifier: workspace:*
+        version: link:../pkg0090
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0092:
+    dependencies:
+      '@synth/pkg0082':
+        specifier: workspace:*
+        version: link:../pkg0082
+      '@synth/pkg0091':
+        specifier: workspace:*
+        version: link:../pkg0091
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0093:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0083':
+        specifier: workspace:*
+        version: link:../pkg0083
+      '@synth/pkg0092':
+        specifier: workspace:*
+        version: link:../pkg0092
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0094:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0084':
+        specifier: workspace:*
+        version: link:../pkg0084
+      '@synth/pkg0093':
+        specifier: workspace:*
+        version: link:../pkg0093
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0095:
+    dependencies:
+      '@synth/pkg0085':
+        specifier: workspace:*
+        version: link:../pkg0085
+      '@synth/pkg0094':
+        specifier: workspace:*
+        version: link:../pkg0094
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0096:
+    dependencies:
+      '@synth/pkg0086':
+        specifier: workspace:*
+        version: link:../pkg0086
+      '@synth/pkg0095':
+        specifier: workspace:*
+        version: link:../pkg0095
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0097:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0087':
+        specifier: workspace:*
+        version: link:../pkg0087
+      '@synth/pkg0096':
+        specifier: workspace:*
+        version: link:../pkg0096
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0098:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0088':
+        specifier: workspace:*
+        version: link:../pkg0088
+      '@synth/pkg0097':
+        specifier: workspace:*
+        version: link:../pkg0097
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0099:
+    dependencies:
+      '@synth/pkg0089':
+        specifier: workspace:*
+        version: link:../pkg0089
+      '@synth/pkg0098':
+        specifier: workspace:*
+        version: link:../pkg0098
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0100:
+    dependencies:
+      '@synth/pkg0090':
+        specifier: workspace:*
+        version: link:../pkg0090
+      '@synth/pkg0099':
+        specifier: workspace:*
+        version: link:../pkg0099
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0101:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0091':
+        specifier: workspace:*
+        version: link:../pkg0091
+      '@synth/pkg0100':
+        specifier: workspace:*
+        version: link:../pkg0100
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0102:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0092':
+        specifier: workspace:*
+        version: link:../pkg0092
+      '@synth/pkg0101':
+        specifier: workspace:*
+        version: link:../pkg0101
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0103:
+    dependencies:
+      '@synth/pkg0093':
+        specifier: workspace:*
+        version: link:../pkg0093
+      '@synth/pkg0102':
+        specifier: workspace:*
+        version: link:../pkg0102
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0104:
+    dependencies:
+      '@synth/pkg0094':
+        specifier: workspace:*
+        version: link:../pkg0094
+      '@synth/pkg0103':
+        specifier: workspace:*
+        version: link:../pkg0103
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0105:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0095':
+        specifier: workspace:*
+        version: link:../pkg0095
+      '@synth/pkg0104':
+        specifier: workspace:*
+        version: link:../pkg0104
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0106:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0096':
+        specifier: workspace:*
+        version: link:../pkg0096
+      '@synth/pkg0105':
+        specifier: workspace:*
+        version: link:../pkg0105
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0107:
+    dependencies:
+      '@synth/pkg0097':
+        specifier: workspace:*
+        version: link:../pkg0097
+      '@synth/pkg0106':
+        specifier: workspace:*
+        version: link:../pkg0106
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0108:
+    dependencies:
+      '@synth/pkg0098':
+        specifier: workspace:*
+        version: link:../pkg0098
+      '@synth/pkg0107':
+        specifier: workspace:*
+        version: link:../pkg0107
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0109:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0099':
+        specifier: workspace:*
+        version: link:../pkg0099
+      '@synth/pkg0108':
+        specifier: workspace:*
+        version: link:../pkg0108
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0110:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0100':
+        specifier: workspace:*
+        version: link:../pkg0100
+      '@synth/pkg0109':
+        specifier: workspace:*
+        version: link:../pkg0109
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0111:
+    dependencies:
+      '@synth/pkg0101':
+        specifier: workspace:*
+        version: link:../pkg0101
+      '@synth/pkg0110':
+        specifier: workspace:*
+        version: link:../pkg0110
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0112:
+    dependencies:
+      '@synth/pkg0102':
+        specifier: workspace:*
+        version: link:../pkg0102
+      '@synth/pkg0111':
+        specifier: workspace:*
+        version: link:../pkg0111
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0113:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0103':
+        specifier: workspace:*
+        version: link:../pkg0103
+      '@synth/pkg0112':
+        specifier: workspace:*
+        version: link:../pkg0112
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0114:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0104':
+        specifier: workspace:*
+        version: link:../pkg0104
+      '@synth/pkg0113':
+        specifier: workspace:*
+        version: link:../pkg0113
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0115:
+    dependencies:
+      '@synth/pkg0105':
+        specifier: workspace:*
+        version: link:../pkg0105
+      '@synth/pkg0114':
+        specifier: workspace:*
+        version: link:../pkg0114
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0116:
+    dependencies:
+      '@synth/pkg0106':
+        specifier: workspace:*
+        version: link:../pkg0106
+      '@synth/pkg0115':
+        specifier: workspace:*
+        version: link:../pkg0115
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0117:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0107':
+        specifier: workspace:*
+        version: link:../pkg0107
+      '@synth/pkg0116':
+        specifier: workspace:*
+        version: link:../pkg0116
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0118:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0108':
+        specifier: workspace:*
+        version: link:../pkg0108
+      '@synth/pkg0117':
+        specifier: workspace:*
+        version: link:../pkg0117
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0119:
+    dependencies:
+      '@synth/pkg0109':
+        specifier: workspace:*
+        version: link:../pkg0109
+      '@synth/pkg0118':
+        specifier: workspace:*
+        version: link:../pkg0118
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0120:
+    dependencies:
+      '@synth/pkg0110':
+        specifier: workspace:*
+        version: link:../pkg0110
+      '@synth/pkg0119':
+        specifier: workspace:*
+        version: link:../pkg0119
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0121:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0111':
+        specifier: workspace:*
+        version: link:../pkg0111
+      '@synth/pkg0120':
+        specifier: workspace:*
+        version: link:../pkg0120
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0122:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0112':
+        specifier: workspace:*
+        version: link:../pkg0112
+      '@synth/pkg0121':
+        specifier: workspace:*
+        version: link:../pkg0121
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0123:
+    dependencies:
+      '@synth/pkg0113':
+        specifier: workspace:*
+        version: link:../pkg0113
+      '@synth/pkg0122':
+        specifier: workspace:*
+        version: link:../pkg0122
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0124:
+    dependencies:
+      '@synth/pkg0114':
+        specifier: workspace:*
+        version: link:../pkg0114
+      '@synth/pkg0123':
+        specifier: workspace:*
+        version: link:../pkg0123
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0125:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0115':
+        specifier: workspace:*
+        version: link:../pkg0115
+      '@synth/pkg0124':
+        specifier: workspace:*
+        version: link:../pkg0124
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0126:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0116':
+        specifier: workspace:*
+        version: link:../pkg0116
+      '@synth/pkg0125':
+        specifier: workspace:*
+        version: link:../pkg0125
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0127:
+    dependencies:
+      '@synth/pkg0117':
+        specifier: workspace:*
+        version: link:../pkg0117
+      '@synth/pkg0126':
+        specifier: workspace:*
+        version: link:../pkg0126
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0128:
+    dependencies:
+      '@synth/pkg0118':
+        specifier: workspace:*
+        version: link:../pkg0118
+      '@synth/pkg0127':
+        specifier: workspace:*
+        version: link:../pkg0127
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0129:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0119':
+        specifier: workspace:*
+        version: link:../pkg0119
+      '@synth/pkg0128':
+        specifier: workspace:*
+        version: link:../pkg0128
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0130:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0120':
+        specifier: workspace:*
+        version: link:../pkg0120
+      '@synth/pkg0129':
+        specifier: workspace:*
+        version: link:../pkg0129
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0131:
+    dependencies:
+      '@synth/pkg0121':
+        specifier: workspace:*
+        version: link:../pkg0121
+      '@synth/pkg0130':
+        specifier: workspace:*
+        version: link:../pkg0130
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0132:
+    dependencies:
+      '@synth/pkg0122':
+        specifier: workspace:*
+        version: link:../pkg0122
+      '@synth/pkg0131':
+        specifier: workspace:*
+        version: link:../pkg0131
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0133:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0123':
+        specifier: workspace:*
+        version: link:../pkg0123
+      '@synth/pkg0132':
+        specifier: workspace:*
+        version: link:../pkg0132
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0134:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0124':
+        specifier: workspace:*
+        version: link:../pkg0124
+      '@synth/pkg0133':
+        specifier: workspace:*
+        version: link:../pkg0133
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0135:
+    dependencies:
+      '@synth/pkg0125':
+        specifier: workspace:*
+        version: link:../pkg0125
+      '@synth/pkg0134':
+        specifier: workspace:*
+        version: link:../pkg0134
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0136:
+    dependencies:
+      '@synth/pkg0126':
+        specifier: workspace:*
+        version: link:../pkg0126
+      '@synth/pkg0135':
+        specifier: workspace:*
+        version: link:../pkg0135
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0137:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0127':
+        specifier: workspace:*
+        version: link:../pkg0127
+      '@synth/pkg0136':
+        specifier: workspace:*
+        version: link:../pkg0136
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0138:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0128':
+        specifier: workspace:*
+        version: link:../pkg0128
+      '@synth/pkg0137':
+        specifier: workspace:*
+        version: link:../pkg0137
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0139:
+    dependencies:
+      '@synth/pkg0129':
+        specifier: workspace:*
+        version: link:../pkg0129
+      '@synth/pkg0138':
+        specifier: workspace:*
+        version: link:../pkg0138
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0140:
+    dependencies:
+      '@synth/pkg0130':
+        specifier: workspace:*
+        version: link:../pkg0130
+      '@synth/pkg0139':
+        specifier: workspace:*
+        version: link:../pkg0139
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0141:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0131':
+        specifier: workspace:*
+        version: link:../pkg0131
+      '@synth/pkg0140':
+        specifier: workspace:*
+        version: link:../pkg0140
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0142:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0132':
+        specifier: workspace:*
+        version: link:../pkg0132
+      '@synth/pkg0141':
+        specifier: workspace:*
+        version: link:../pkg0141
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0143:
+    dependencies:
+      '@synth/pkg0133':
+        specifier: workspace:*
+        version: link:../pkg0133
+      '@synth/pkg0142':
+        specifier: workspace:*
+        version: link:../pkg0142
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0144:
+    dependencies:
+      '@synth/pkg0134':
+        specifier: workspace:*
+        version: link:../pkg0134
+      '@synth/pkg0143':
+        specifier: workspace:*
+        version: link:../pkg0143
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0145:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0135':
+        specifier: workspace:*
+        version: link:../pkg0135
+      '@synth/pkg0144':
+        specifier: workspace:*
+        version: link:../pkg0144
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0146:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0136':
+        specifier: workspace:*
+        version: link:../pkg0136
+      '@synth/pkg0145':
+        specifier: workspace:*
+        version: link:../pkg0145
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0147:
+    dependencies:
+      '@synth/pkg0137':
+        specifier: workspace:*
+        version: link:../pkg0137
+      '@synth/pkg0146':
+        specifier: workspace:*
+        version: link:../pkg0146
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0148:
+    dependencies:
+      '@synth/pkg0138':
+        specifier: workspace:*
+        version: link:../pkg0138
+      '@synth/pkg0147':
+        specifier: workspace:*
+        version: link:../pkg0147
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0149:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0139':
+        specifier: workspace:*
+        version: link:../pkg0139
+      '@synth/pkg0148':
+        specifier: workspace:*
+        version: link:../pkg0148
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0150:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0140':
+        specifier: workspace:*
+        version: link:../pkg0140
+      '@synth/pkg0149':
+        specifier: workspace:*
+        version: link:../pkg0149
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0151:
+    dependencies:
+      '@synth/pkg0141':
+        specifier: workspace:*
+        version: link:../pkg0141
+      '@synth/pkg0150':
+        specifier: workspace:*
+        version: link:../pkg0150
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0152:
+    dependencies:
+      '@synth/pkg0142':
+        specifier: workspace:*
+        version: link:../pkg0142
+      '@synth/pkg0151':
+        specifier: workspace:*
+        version: link:../pkg0151
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0153:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0143':
+        specifier: workspace:*
+        version: link:../pkg0143
+      '@synth/pkg0152':
+        specifier: workspace:*
+        version: link:../pkg0152
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0154:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0144':
+        specifier: workspace:*
+        version: link:../pkg0144
+      '@synth/pkg0153':
+        specifier: workspace:*
+        version: link:../pkg0153
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0155:
+    dependencies:
+      '@synth/pkg0145':
+        specifier: workspace:*
+        version: link:../pkg0145
+      '@synth/pkg0154':
+        specifier: workspace:*
+        version: link:../pkg0154
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0156:
+    dependencies:
+      '@synth/pkg0146':
+        specifier: workspace:*
+        version: link:../pkg0146
+      '@synth/pkg0155':
+        specifier: workspace:*
+        version: link:../pkg0155
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0157:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0147':
+        specifier: workspace:*
+        version: link:../pkg0147
+      '@synth/pkg0156':
+        specifier: workspace:*
+        version: link:../pkg0156
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0158:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0148':
+        specifier: workspace:*
+        version: link:../pkg0148
+      '@synth/pkg0157':
+        specifier: workspace:*
+        version: link:../pkg0157
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0159:
+    dependencies:
+      '@synth/pkg0149':
+        specifier: workspace:*
+        version: link:../pkg0149
+      '@synth/pkg0158':
+        specifier: workspace:*
+        version: link:../pkg0158
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0160:
+    dependencies:
+      '@synth/pkg0150':
+        specifier: workspace:*
+        version: link:../pkg0150
+      '@synth/pkg0159':
+        specifier: workspace:*
+        version: link:../pkg0159
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0161:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0151':
+        specifier: workspace:*
+        version: link:../pkg0151
+      '@synth/pkg0160':
+        specifier: workspace:*
+        version: link:../pkg0160
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0162:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0152':
+        specifier: workspace:*
+        version: link:../pkg0152
+      '@synth/pkg0161':
+        specifier: workspace:*
+        version: link:../pkg0161
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0163:
+    dependencies:
+      '@synth/pkg0153':
+        specifier: workspace:*
+        version: link:../pkg0153
+      '@synth/pkg0162':
+        specifier: workspace:*
+        version: link:../pkg0162
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0164:
+    dependencies:
+      '@synth/pkg0154':
+        specifier: workspace:*
+        version: link:../pkg0154
+      '@synth/pkg0163':
+        specifier: workspace:*
+        version: link:../pkg0163
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0165:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0155':
+        specifier: workspace:*
+        version: link:../pkg0155
+      '@synth/pkg0164':
+        specifier: workspace:*
+        version: link:../pkg0164
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0166:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0156':
+        specifier: workspace:*
+        version: link:../pkg0156
+      '@synth/pkg0165':
+        specifier: workspace:*
+        version: link:../pkg0165
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0167:
+    dependencies:
+      '@synth/pkg0157':
+        specifier: workspace:*
+        version: link:../pkg0157
+      '@synth/pkg0166':
+        specifier: workspace:*
+        version: link:../pkg0166
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0168:
+    dependencies:
+      '@synth/pkg0158':
+        specifier: workspace:*
+        version: link:../pkg0158
+      '@synth/pkg0167':
+        specifier: workspace:*
+        version: link:../pkg0167
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0169:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0159':
+        specifier: workspace:*
+        version: link:../pkg0159
+      '@synth/pkg0168':
+        specifier: workspace:*
+        version: link:../pkg0168
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0170:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0160':
+        specifier: workspace:*
+        version: link:../pkg0160
+      '@synth/pkg0169':
+        specifier: workspace:*
+        version: link:../pkg0169
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0171:
+    dependencies:
+      '@synth/pkg0161':
+        specifier: workspace:*
+        version: link:../pkg0161
+      '@synth/pkg0170':
+        specifier: workspace:*
+        version: link:../pkg0170
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0172:
+    dependencies:
+      '@synth/pkg0162':
+        specifier: workspace:*
+        version: link:../pkg0162
+      '@synth/pkg0171':
+        specifier: workspace:*
+        version: link:../pkg0171
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0173:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0163':
+        specifier: workspace:*
+        version: link:../pkg0163
+      '@synth/pkg0172':
+        specifier: workspace:*
+        version: link:../pkg0172
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0174:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0164':
+        specifier: workspace:*
+        version: link:../pkg0164
+      '@synth/pkg0173':
+        specifier: workspace:*
+        version: link:../pkg0173
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0175:
+    dependencies:
+      '@synth/pkg0165':
+        specifier: workspace:*
+        version: link:../pkg0165
+      '@synth/pkg0174':
+        specifier: workspace:*
+        version: link:../pkg0174
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0176:
+    dependencies:
+      '@synth/pkg0166':
+        specifier: workspace:*
+        version: link:../pkg0166
+      '@synth/pkg0175':
+        specifier: workspace:*
+        version: link:../pkg0175
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0177:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0167':
+        specifier: workspace:*
+        version: link:../pkg0167
+      '@synth/pkg0176':
+        specifier: workspace:*
+        version: link:../pkg0176
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0178:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0168':
+        specifier: workspace:*
+        version: link:../pkg0168
+      '@synth/pkg0177':
+        specifier: workspace:*
+        version: link:../pkg0177
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0179:
+    dependencies:
+      '@synth/pkg0169':
+        specifier: workspace:*
+        version: link:../pkg0169
+      '@synth/pkg0178':
+        specifier: workspace:*
+        version: link:../pkg0178
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0180:
+    dependencies:
+      '@synth/pkg0170':
+        specifier: workspace:*
+        version: link:../pkg0170
+      '@synth/pkg0179':
+        specifier: workspace:*
+        version: link:../pkg0179
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0181:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0171':
+        specifier: workspace:*
+        version: link:../pkg0171
+      '@synth/pkg0180':
+        specifier: workspace:*
+        version: link:../pkg0180
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0182:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0172':
+        specifier: workspace:*
+        version: link:../pkg0172
+      '@synth/pkg0181':
+        specifier: workspace:*
+        version: link:../pkg0181
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0183:
+    dependencies:
+      '@synth/pkg0173':
+        specifier: workspace:*
+        version: link:../pkg0173
+      '@synth/pkg0182':
+        specifier: workspace:*
+        version: link:../pkg0182
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0184:
+    dependencies:
+      '@synth/pkg0174':
+        specifier: workspace:*
+        version: link:../pkg0174
+      '@synth/pkg0183':
+        specifier: workspace:*
+        version: link:../pkg0183
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0185:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0175':
+        specifier: workspace:*
+        version: link:../pkg0175
+      '@synth/pkg0184':
+        specifier: workspace:*
+        version: link:../pkg0184
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0186:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0176':
+        specifier: workspace:*
+        version: link:../pkg0176
+      '@synth/pkg0185':
+        specifier: workspace:*
+        version: link:../pkg0185
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0187:
+    dependencies:
+      '@synth/pkg0177':
+        specifier: workspace:*
+        version: link:../pkg0177
+      '@synth/pkg0186':
+        specifier: workspace:*
+        version: link:../pkg0186
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0188:
+    dependencies:
+      '@synth/pkg0178':
+        specifier: workspace:*
+        version: link:../pkg0178
+      '@synth/pkg0187':
+        specifier: workspace:*
+        version: link:../pkg0187
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0189:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0179':
+        specifier: workspace:*
+        version: link:../pkg0179
+      '@synth/pkg0188':
+        specifier: workspace:*
+        version: link:../pkg0188
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0190:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0180':
+        specifier: workspace:*
+        version: link:../pkg0180
+      '@synth/pkg0189':
+        specifier: workspace:*
+        version: link:../pkg0189
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0191:
+    dependencies:
+      '@synth/pkg0181':
+        specifier: workspace:*
+        version: link:../pkg0181
+      '@synth/pkg0190':
+        specifier: workspace:*
+        version: link:../pkg0190
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0192:
+    dependencies:
+      '@synth/pkg0182':
+        specifier: workspace:*
+        version: link:../pkg0182
+      '@synth/pkg0191':
+        specifier: workspace:*
+        version: link:../pkg0191
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0193:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0183':
+        specifier: workspace:*
+        version: link:../pkg0183
+      '@synth/pkg0192':
+        specifier: workspace:*
+        version: link:../pkg0192
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0194:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0184':
+        specifier: workspace:*
+        version: link:../pkg0184
+      '@synth/pkg0193':
+        specifier: workspace:*
+        version: link:../pkg0193
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0195:
+    dependencies:
+      '@synth/pkg0185':
+        specifier: workspace:*
+        version: link:../pkg0185
+      '@synth/pkg0194':
+        specifier: workspace:*
+        version: link:../pkg0194
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0196:
+    dependencies:
+      '@synth/pkg0186':
+        specifier: workspace:*
+        version: link:../pkg0186
+      '@synth/pkg0195':
+        specifier: workspace:*
+        version: link:../pkg0195
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0197:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0187':
+        specifier: workspace:*
+        version: link:../pkg0187
+      '@synth/pkg0196':
+        specifier: workspace:*
+        version: link:../pkg0196
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0198:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0188':
+        specifier: workspace:*
+        version: link:../pkg0188
+      '@synth/pkg0197':
+        specifier: workspace:*
+        version: link:../pkg0197
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0199:
+    dependencies:
+      '@synth/pkg0189':
+        specifier: workspace:*
+        version: link:../pkg0189
+      '@synth/pkg0198':
+        specifier: workspace:*
+        version: link:../pkg0198
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0200:
+    dependencies:
+      '@synth/pkg0190':
+        specifier: workspace:*
+        version: link:../pkg0190
+      '@synth/pkg0199':
+        specifier: workspace:*
+        version: link:../pkg0199
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0201:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0191':
+        specifier: workspace:*
+        version: link:../pkg0191
+      '@synth/pkg0200':
+        specifier: workspace:*
+        version: link:../pkg0200
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0202:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0192':
+        specifier: workspace:*
+        version: link:../pkg0192
+      '@synth/pkg0201':
+        specifier: workspace:*
+        version: link:../pkg0201
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0203:
+    dependencies:
+      '@synth/pkg0193':
+        specifier: workspace:*
+        version: link:../pkg0193
+      '@synth/pkg0202':
+        specifier: workspace:*
+        version: link:../pkg0202
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0204:
+    dependencies:
+      '@synth/pkg0194':
+        specifier: workspace:*
+        version: link:../pkg0194
+      '@synth/pkg0203':
+        specifier: workspace:*
+        version: link:../pkg0203
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0205:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0195':
+        specifier: workspace:*
+        version: link:../pkg0195
+      '@synth/pkg0204':
+        specifier: workspace:*
+        version: link:../pkg0204
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0206:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0196':
+        specifier: workspace:*
+        version: link:../pkg0196
+      '@synth/pkg0205':
+        specifier: workspace:*
+        version: link:../pkg0205
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0207:
+    dependencies:
+      '@synth/pkg0197':
+        specifier: workspace:*
+        version: link:../pkg0197
+      '@synth/pkg0206':
+        specifier: workspace:*
+        version: link:../pkg0206
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0208:
+    dependencies:
+      '@synth/pkg0198':
+        specifier: workspace:*
+        version: link:../pkg0198
+      '@synth/pkg0207':
+        specifier: workspace:*
+        version: link:../pkg0207
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0209:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0199':
+        specifier: workspace:*
+        version: link:../pkg0199
+      '@synth/pkg0208':
+        specifier: workspace:*
+        version: link:../pkg0208
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0210:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0200':
+        specifier: workspace:*
+        version: link:../pkg0200
+      '@synth/pkg0209':
+        specifier: workspace:*
+        version: link:../pkg0209
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0211:
+    dependencies:
+      '@synth/pkg0201':
+        specifier: workspace:*
+        version: link:../pkg0201
+      '@synth/pkg0210':
+        specifier: workspace:*
+        version: link:../pkg0210
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0212:
+    dependencies:
+      '@synth/pkg0202':
+        specifier: workspace:*
+        version: link:../pkg0202
+      '@synth/pkg0211':
+        specifier: workspace:*
+        version: link:../pkg0211
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0213:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0203':
+        specifier: workspace:*
+        version: link:../pkg0203
+      '@synth/pkg0212':
+        specifier: workspace:*
+        version: link:../pkg0212
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0214:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0204':
+        specifier: workspace:*
+        version: link:../pkg0204
+      '@synth/pkg0213':
+        specifier: workspace:*
+        version: link:../pkg0213
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0215:
+    dependencies:
+      '@synth/pkg0205':
+        specifier: workspace:*
+        version: link:../pkg0205
+      '@synth/pkg0214':
+        specifier: workspace:*
+        version: link:../pkg0214
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0216:
+    dependencies:
+      '@synth/pkg0206':
+        specifier: workspace:*
+        version: link:../pkg0206
+      '@synth/pkg0215':
+        specifier: workspace:*
+        version: link:../pkg0215
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0217:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0207':
+        specifier: workspace:*
+        version: link:../pkg0207
+      '@synth/pkg0216':
+        specifier: workspace:*
+        version: link:../pkg0216
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0218:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0208':
+        specifier: workspace:*
+        version: link:../pkg0208
+      '@synth/pkg0217':
+        specifier: workspace:*
+        version: link:../pkg0217
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0219:
+    dependencies:
+      '@synth/pkg0209':
+        specifier: workspace:*
+        version: link:../pkg0209
+      '@synth/pkg0218':
+        specifier: workspace:*
+        version: link:../pkg0218
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0220:
+    dependencies:
+      '@synth/pkg0210':
+        specifier: workspace:*
+        version: link:../pkg0210
+      '@synth/pkg0219':
+        specifier: workspace:*
+        version: link:../pkg0219
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0221:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0211':
+        specifier: workspace:*
+        version: link:../pkg0211
+      '@synth/pkg0220':
+        specifier: workspace:*
+        version: link:../pkg0220
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0222:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0212':
+        specifier: workspace:*
+        version: link:../pkg0212
+      '@synth/pkg0221':
+        specifier: workspace:*
+        version: link:../pkg0221
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0223:
+    dependencies:
+      '@synth/pkg0213':
+        specifier: workspace:*
+        version: link:../pkg0213
+      '@synth/pkg0222':
+        specifier: workspace:*
+        version: link:../pkg0222
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0224:
+    dependencies:
+      '@synth/pkg0214':
+        specifier: workspace:*
+        version: link:../pkg0214
+      '@synth/pkg0223':
+        specifier: workspace:*
+        version: link:../pkg0223
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0225:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0215':
+        specifier: workspace:*
+        version: link:../pkg0215
+      '@synth/pkg0224':
+        specifier: workspace:*
+        version: link:../pkg0224
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0226:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0216':
+        specifier: workspace:*
+        version: link:../pkg0216
+      '@synth/pkg0225':
+        specifier: workspace:*
+        version: link:../pkg0225
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0227:
+    dependencies:
+      '@synth/pkg0217':
+        specifier: workspace:*
+        version: link:../pkg0217
+      '@synth/pkg0226':
+        specifier: workspace:*
+        version: link:../pkg0226
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0228:
+    dependencies:
+      '@synth/pkg0218':
+        specifier: workspace:*
+        version: link:../pkg0218
+      '@synth/pkg0227':
+        specifier: workspace:*
+        version: link:../pkg0227
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0229:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0219':
+        specifier: workspace:*
+        version: link:../pkg0219
+      '@synth/pkg0228':
+        specifier: workspace:*
+        version: link:../pkg0228
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0230:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0220':
+        specifier: workspace:*
+        version: link:../pkg0220
+      '@synth/pkg0229':
+        specifier: workspace:*
+        version: link:../pkg0229
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0231:
+    dependencies:
+      '@synth/pkg0221':
+        specifier: workspace:*
+        version: link:../pkg0221
+      '@synth/pkg0230':
+        specifier: workspace:*
+        version: link:../pkg0230
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0232:
+    dependencies:
+      '@synth/pkg0222':
+        specifier: workspace:*
+        version: link:../pkg0222
+      '@synth/pkg0231':
+        specifier: workspace:*
+        version: link:../pkg0231
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0233:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0223':
+        specifier: workspace:*
+        version: link:../pkg0223
+      '@synth/pkg0232':
+        specifier: workspace:*
+        version: link:../pkg0232
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0234:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0224':
+        specifier: workspace:*
+        version: link:../pkg0224
+      '@synth/pkg0233':
+        specifier: workspace:*
+        version: link:../pkg0233
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0235:
+    dependencies:
+      '@synth/pkg0225':
+        specifier: workspace:*
+        version: link:../pkg0225
+      '@synth/pkg0234':
+        specifier: workspace:*
+        version: link:../pkg0234
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0236:
+    dependencies:
+      '@synth/pkg0226':
+        specifier: workspace:*
+        version: link:../pkg0226
+      '@synth/pkg0235':
+        specifier: workspace:*
+        version: link:../pkg0235
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0237:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0227':
+        specifier: workspace:*
+        version: link:../pkg0227
+      '@synth/pkg0236':
+        specifier: workspace:*
+        version: link:../pkg0236
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0238:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0228':
+        specifier: workspace:*
+        version: link:../pkg0228
+      '@synth/pkg0237':
+        specifier: workspace:*
+        version: link:../pkg0237
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0239:
+    dependencies:
+      '@synth/pkg0229':
+        specifier: workspace:*
+        version: link:../pkg0229
+      '@synth/pkg0238':
+        specifier: workspace:*
+        version: link:../pkg0238
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0240:
+    dependencies:
+      '@synth/pkg0230':
+        specifier: workspace:*
+        version: link:../pkg0230
+      '@synth/pkg0239':
+        specifier: workspace:*
+        version: link:../pkg0239
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0241:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0231':
+        specifier: workspace:*
+        version: link:../pkg0231
+      '@synth/pkg0240':
+        specifier: workspace:*
+        version: link:../pkg0240
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0242:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0232':
+        specifier: workspace:*
+        version: link:../pkg0232
+      '@synth/pkg0241':
+        specifier: workspace:*
+        version: link:../pkg0241
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0243:
+    dependencies:
+      '@synth/pkg0233':
+        specifier: workspace:*
+        version: link:../pkg0233
+      '@synth/pkg0242':
+        specifier: workspace:*
+        version: link:../pkg0242
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0244:
+    dependencies:
+      '@synth/pkg0234':
+        specifier: workspace:*
+        version: link:../pkg0234
+      '@synth/pkg0243':
+        specifier: workspace:*
+        version: link:../pkg0243
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0245:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0235':
+        specifier: workspace:*
+        version: link:../pkg0235
+      '@synth/pkg0244':
+        specifier: workspace:*
+        version: link:../pkg0244
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0246:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0236':
+        specifier: workspace:*
+        version: link:../pkg0236
+      '@synth/pkg0245':
+        specifier: workspace:*
+        version: link:../pkg0245
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0247:
+    dependencies:
+      '@synth/pkg0237':
+        specifier: workspace:*
+        version: link:../pkg0237
+      '@synth/pkg0246':
+        specifier: workspace:*
+        version: link:../pkg0246
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0248:
+    dependencies:
+      '@synth/pkg0238':
+        specifier: workspace:*
+        version: link:../pkg0238
+      '@synth/pkg0247':
+        specifier: workspace:*
+        version: link:../pkg0247
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0249:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0239':
+        specifier: workspace:*
+        version: link:../pkg0239
+      '@synth/pkg0248':
+        specifier: workspace:*
+        version: link:../pkg0248
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0250:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0240':
+        specifier: workspace:*
+        version: link:../pkg0240
+      '@synth/pkg0249':
+        specifier: workspace:*
+        version: link:../pkg0249
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0251:
+    dependencies:
+      '@synth/pkg0241':
+        specifier: workspace:*
+        version: link:../pkg0241
+      '@synth/pkg0250':
+        specifier: workspace:*
+        version: link:../pkg0250
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0252:
+    dependencies:
+      '@synth/pkg0242':
+        specifier: workspace:*
+        version: link:../pkg0242
+      '@synth/pkg0251':
+        specifier: workspace:*
+        version: link:../pkg0251
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0253:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0243':
+        specifier: workspace:*
+        version: link:../pkg0243
+      '@synth/pkg0252':
+        specifier: workspace:*
+        version: link:../pkg0252
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0254:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0244':
+        specifier: workspace:*
+        version: link:../pkg0244
+      '@synth/pkg0253':
+        specifier: workspace:*
+        version: link:../pkg0253
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0255:
+    dependencies:
+      '@synth/pkg0245':
+        specifier: workspace:*
+        version: link:../pkg0245
+      '@synth/pkg0254':
+        specifier: workspace:*
+        version: link:../pkg0254
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0256:
+    dependencies:
+      '@synth/pkg0246':
+        specifier: workspace:*
+        version: link:../pkg0246
+      '@synth/pkg0255':
+        specifier: workspace:*
+        version: link:../pkg0255
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0257:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0247':
+        specifier: workspace:*
+        version: link:../pkg0247
+      '@synth/pkg0256':
+        specifier: workspace:*
+        version: link:../pkg0256
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0258:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0248':
+        specifier: workspace:*
+        version: link:../pkg0248
+      '@synth/pkg0257':
+        specifier: workspace:*
+        version: link:../pkg0257
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0259:
+    dependencies:
+      '@synth/pkg0249':
+        specifier: workspace:*
+        version: link:../pkg0249
+      '@synth/pkg0258':
+        specifier: workspace:*
+        version: link:../pkg0258
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0260:
+    dependencies:
+      '@synth/pkg0250':
+        specifier: workspace:*
+        version: link:../pkg0250
+      '@synth/pkg0259':
+        specifier: workspace:*
+        version: link:../pkg0259
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0261:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0251':
+        specifier: workspace:*
+        version: link:../pkg0251
+      '@synth/pkg0260':
+        specifier: workspace:*
+        version: link:../pkg0260
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0262:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0252':
+        specifier: workspace:*
+        version: link:../pkg0252
+      '@synth/pkg0261':
+        specifier: workspace:*
+        version: link:../pkg0261
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0263:
+    dependencies:
+      '@synth/pkg0253':
+        specifier: workspace:*
+        version: link:../pkg0253
+      '@synth/pkg0262':
+        specifier: workspace:*
+        version: link:../pkg0262
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0264:
+    dependencies:
+      '@synth/pkg0254':
+        specifier: workspace:*
+        version: link:../pkg0254
+      '@synth/pkg0263':
+        specifier: workspace:*
+        version: link:../pkg0263
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0265:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0255':
+        specifier: workspace:*
+        version: link:../pkg0255
+      '@synth/pkg0264':
+        specifier: workspace:*
+        version: link:../pkg0264
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0266:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0256':
+        specifier: workspace:*
+        version: link:../pkg0256
+      '@synth/pkg0265':
+        specifier: workspace:*
+        version: link:../pkg0265
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0267:
+    dependencies:
+      '@synth/pkg0257':
+        specifier: workspace:*
+        version: link:../pkg0257
+      '@synth/pkg0266':
+        specifier: workspace:*
+        version: link:../pkg0266
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0268:
+    dependencies:
+      '@synth/pkg0258':
+        specifier: workspace:*
+        version: link:../pkg0258
+      '@synth/pkg0267':
+        specifier: workspace:*
+        version: link:../pkg0267
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0269:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0259':
+        specifier: workspace:*
+        version: link:../pkg0259
+      '@synth/pkg0268':
+        specifier: workspace:*
+        version: link:../pkg0268
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0270:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0260':
+        specifier: workspace:*
+        version: link:../pkg0260
+      '@synth/pkg0269':
+        specifier: workspace:*
+        version: link:../pkg0269
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0271:
+    dependencies:
+      '@synth/pkg0261':
+        specifier: workspace:*
+        version: link:../pkg0261
+      '@synth/pkg0270':
+        specifier: workspace:*
+        version: link:../pkg0270
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0272:
+    dependencies:
+      '@synth/pkg0262':
+        specifier: workspace:*
+        version: link:../pkg0262
+      '@synth/pkg0271':
+        specifier: workspace:*
+        version: link:../pkg0271
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0273:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0263':
+        specifier: workspace:*
+        version: link:../pkg0263
+      '@synth/pkg0272':
+        specifier: workspace:*
+        version: link:../pkg0272
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0274:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0264':
+        specifier: workspace:*
+        version: link:../pkg0264
+      '@synth/pkg0273':
+        specifier: workspace:*
+        version: link:../pkg0273
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0275:
+    dependencies:
+      '@synth/pkg0265':
+        specifier: workspace:*
+        version: link:../pkg0265
+      '@synth/pkg0274':
+        specifier: workspace:*
+        version: link:../pkg0274
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0276:
+    dependencies:
+      '@synth/pkg0266':
+        specifier: workspace:*
+        version: link:../pkg0266
+      '@synth/pkg0275':
+        specifier: workspace:*
+        version: link:../pkg0275
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0277:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0267':
+        specifier: workspace:*
+        version: link:../pkg0267
+      '@synth/pkg0276':
+        specifier: workspace:*
+        version: link:../pkg0276
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0278:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0268':
+        specifier: workspace:*
+        version: link:../pkg0268
+      '@synth/pkg0277':
+        specifier: workspace:*
+        version: link:../pkg0277
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0279:
+    dependencies:
+      '@synth/pkg0269':
+        specifier: workspace:*
+        version: link:../pkg0269
+      '@synth/pkg0278':
+        specifier: workspace:*
+        version: link:../pkg0278
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0280:
+    dependencies:
+      '@synth/pkg0270':
+        specifier: workspace:*
+        version: link:../pkg0270
+      '@synth/pkg0279':
+        specifier: workspace:*
+        version: link:../pkg0279
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0281:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0271':
+        specifier: workspace:*
+        version: link:../pkg0271
+      '@synth/pkg0280':
+        specifier: workspace:*
+        version: link:../pkg0280
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0282:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0272':
+        specifier: workspace:*
+        version: link:../pkg0272
+      '@synth/pkg0281':
+        specifier: workspace:*
+        version: link:../pkg0281
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0283:
+    dependencies:
+      '@synth/pkg0273':
+        specifier: workspace:*
+        version: link:../pkg0273
+      '@synth/pkg0282':
+        specifier: workspace:*
+        version: link:../pkg0282
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0284:
+    dependencies:
+      '@synth/pkg0274':
+        specifier: workspace:*
+        version: link:../pkg0274
+      '@synth/pkg0283':
+        specifier: workspace:*
+        version: link:../pkg0283
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0285:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0275':
+        specifier: workspace:*
+        version: link:../pkg0275
+      '@synth/pkg0284':
+        specifier: workspace:*
+        version: link:../pkg0284
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0286:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0276':
+        specifier: workspace:*
+        version: link:../pkg0276
+      '@synth/pkg0285':
+        specifier: workspace:*
+        version: link:../pkg0285
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0287:
+    dependencies:
+      '@synth/pkg0277':
+        specifier: workspace:*
+        version: link:../pkg0277
+      '@synth/pkg0286':
+        specifier: workspace:*
+        version: link:../pkg0286
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0288:
+    dependencies:
+      '@synth/pkg0278':
+        specifier: workspace:*
+        version: link:../pkg0278
+      '@synth/pkg0287':
+        specifier: workspace:*
+        version: link:../pkg0287
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0289:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0279':
+        specifier: workspace:*
+        version: link:../pkg0279
+      '@synth/pkg0288':
+        specifier: workspace:*
+        version: link:../pkg0288
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0290:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0280':
+        specifier: workspace:*
+        version: link:../pkg0280
+      '@synth/pkg0289':
+        specifier: workspace:*
+        version: link:../pkg0289
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0291:
+    dependencies:
+      '@synth/pkg0281':
+        specifier: workspace:*
+        version: link:../pkg0281
+      '@synth/pkg0290':
+        specifier: workspace:*
+        version: link:../pkg0290
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0292:
+    dependencies:
+      '@synth/pkg0282':
+        specifier: workspace:*
+        version: link:../pkg0282
+      '@synth/pkg0291':
+        specifier: workspace:*
+        version: link:../pkg0291
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0293:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0283':
+        specifier: workspace:*
+        version: link:../pkg0283
+      '@synth/pkg0292':
+        specifier: workspace:*
+        version: link:../pkg0292
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0294:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0284':
+        specifier: workspace:*
+        version: link:../pkg0284
+      '@synth/pkg0293':
+        specifier: workspace:*
+        version: link:../pkg0293
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0295:
+    dependencies:
+      '@synth/pkg0285':
+        specifier: workspace:*
+        version: link:../pkg0285
+      '@synth/pkg0294':
+        specifier: workspace:*
+        version: link:../pkg0294
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0296:
+    dependencies:
+      '@synth/pkg0286':
+        specifier: workspace:*
+        version: link:../pkg0286
+      '@synth/pkg0295':
+        specifier: workspace:*
+        version: link:../pkg0295
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+
+  packages/pkg0297:
+    dependencies:
+      '@orpc/client':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@orpc/server':
+        specifier: ^1.15.0
+        version: 1.15.0
+      '@synth/pkg0287':
+        specifier: workspace:*
+        version: link:../pkg0287
+      '@synth/pkg0296':
+        specifier: workspace:*
+        version: link:../pkg0296
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0298:
+    dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.8
+        version: 0.5.8
+      '@synth/pkg0288':
+        specifier: workspace:*
+        version: link:../pkg0288
+      '@synth/pkg0297':
+        specifier: workspace:*
+        version: link:../pkg0297
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
+  packages/pkg0299:
+    dependencies:
+      '@synth/pkg0289':
+        specifier: workspace:*
+        version: link:../pkg0289
+      '@synth/pkg0298':
+        specifier: workspace:*
+        version: link:../pkg0298
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.8)(better-sqlite3@13.0.3)
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.2
+
 packages:
 
   '@electric-sql/pglite@0.5.8':

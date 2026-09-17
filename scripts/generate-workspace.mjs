@@ -4,8 +4,8 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
-const packageCount = Number(process.env.WORKSPACE_SIZE ?? 80);
-const testsPerPackage = Number(process.env.TESTS_PER_PACKAGE ?? 6);
+const packageCount = Number(process.env.WORKSPACE_SIZE ?? 300);
+const testsPerPackage = Number(process.env.TESTS_PER_PACKAGE ?? 15);
 
 const packagesDir = path.join(root, "packages");
 rmSync(packagesDir, { recursive: true, force: true });

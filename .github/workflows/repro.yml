@@ -32,9 +32,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - run: pnpm install
       - run: pnpm run generate
-      - run: pnpm install
+      - run: pnpm install --no-frozen-lockfile
       - name: Run under pool "threads", maxWorkers 1
         id: threads
         run: |
@@ -80,8 +79,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - run: pnpm install
       - run: pnpm run generate
-      - run: pnpm install
+      - run: pnpm install --no-frozen-lockfile
       - name: Run under pool "forks", maxWorkers 1 (same file set, same Node API call)
         run: node repro-forks.mjs

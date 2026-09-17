@@ -21,5 +21,8 @@
     "@electric-sql/pglite": "^0.5.8",
     "@orpc/client": "^1.15.0",
     "@orpc/server": "^1.15.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["better-sqlite3"]
   }
 }

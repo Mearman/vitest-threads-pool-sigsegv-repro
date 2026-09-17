@@ -32,17 +32,18 @@ This version tests that structural hypothesis directly: many small real packages
 ## Running it locally
 
 ```bash
-pnpm install
-pnpm run generate           # writes packages/pkgNNNN/ (WORKSPACE_SIZE=300, TESTS_PER_PACKAGE=15 by default)
-pnpm install                 # links the newly generated packages' workspace:* dependencies
+pnpm run generate           # writes packages/pkgNNNN/ (WORKSPACE_SIZE=300, TESTS_PER_PACKAGE=15 by default) -- pure Node, no install needed first
+pnpm install --no-frozen-lockfile   # resolves root + every generated package's deps, including workspace:* cross-refs
 pnpm run repro:threads       # expected: process dies with SIGSEGV (exit code 139)
 pnpm run repro:forks         # expected: completes cleanly
 ```
 
+`--no-frozen-lockfile` is required here: the generated package set (and therefore the lockfile) changes with `WORKSPACE_SIZE`/`TESTS_PER_PACKAGE`, so a lockfile committed for one size will never exactly match a different size.
+
 Scale further with environment variables if you need to push harder:
 
 ```bash
-WORKSPACE_SIZE=600 TESTS_PER_PACKAGE=20 NODE_OPTIONS=--max-old-space-size=6144 pnpm run generate && pnpm install
+WORKSPACE_SIZE=600 TESTS_PER_PACKAGE=20 NODE_OPTIONS=--max-old-space-size=6144 pnpm run generate && pnpm install --no-frozen-lockfile
 ```
 
 ## Expected vs actual
