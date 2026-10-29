@@ -1,5 +1,7 @@
 # vitest-threads-pool-sigsegv-repro
 
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/Mearman/vitest-threads-pool-sigsegv-repro)
+
 Minimal reproduction for [vitest-dev/vitest#11291](https://github.com/vitest-dev/vitest/issues/11291) (duplicate: [#11292](https://github.com/vitest-dev/vitest/issues/11292)): running a large test suite through Vitest's Node API with `pool: "threads"` and `maxWorkers: 1` reliably crashes the process with SIGSEGV during V8 GC on the threads-pool worker isolate. The same file set runs clean under `pool: "forks"`.
 
 ## Why this exists
